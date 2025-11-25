@@ -1,8 +1,7 @@
-import Link from "next/link";
+import Link from 'next/link';
 
-
-const Footer = () => {
-   return (
+function Footer() {
+  return (
     <footer className="border-t bg-background">
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -43,6 +42,5 @@ const Footer = () => {
       </div>
     </footer>
   );
-};
-
+}
 export default Footer;

@@ -1,6 +1,7 @@
+
 import { Hero } from "@/src/Components/modules/Home/Hero";
 import Specialties from "@/src/Components/modules/Home/Specialties";
-import Steps from "@/src/Components/modules/Home/Steps";
+import Steps from "@/src/Components/modules/Home/steps";
 import Testimonials from "@/src/Components/modules/Home/Testimonial";
 import TopRatedDoctors from "@/src/Components/modules/Home/TopRatedDoctors";
 import Head from "next/head";

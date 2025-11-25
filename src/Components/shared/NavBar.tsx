@@ -1,11 +1,10 @@
 import Link from "next/link";
-import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
-import { Menu } from "lucide-react";
+import { Menu, Sheet } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 
-
-const NavBar = () => {
-   const navItems = [
+const Navbar = () => {
+  const navItems = [
     { href: "#", label: "Consultation" },
     { href: "#", label: "Health Plans" },
     { href: "#", label: "Medicine" },
@@ -71,5 +70,4 @@ const NavBar = () => {
   );
 };
 
-
-export default NavBar;
+export default Navbar;
