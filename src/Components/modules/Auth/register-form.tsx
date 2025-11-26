@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 
 "use client";
 
@@ -5,13 +6,17 @@
 import { Button } from "@/components/ui/button";
 import { Field, FieldDescription, FieldGroup, FieldLabel } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
+import { registerPatients } from "@/src/services/Auth/registerPatients";
 import { useActionState } from "react";
 
 
 
+
+
+
 const RegisterForm = () => {
-  const [state, formAction, isPending] = useActionState(registerPatient, null);
-  console.log(state, "state");
+  const [state, formAction, isPending] = useActionState(registerPatients, null);
+
 
   const getFieldError = (fieldName: string) => {
     if (state && (state as any).errors) {

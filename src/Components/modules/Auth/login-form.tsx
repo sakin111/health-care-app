@@ -1,16 +1,24 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+
 "use client";
-import { loginUser } from "@/services/auth/loginUser";
+
+import { Button } from "@/components/ui/button";
+import { Field, FieldDescription, FieldGroup, FieldLabel } from "@/components/ui/field";
+import { Input } from "@/components/ui/input";
+import { loginUser } from "@/src/services/Auth/loginUser";
 import { useActionState } from "react";
-import { Button } from "./ui/button";
-import { Field, FieldDescription, FieldGroup, FieldLabel } from "./ui/field";
-import { Input } from "./ui/input";
+
+
+
+
+
+
 
 const LoginForm = () => {
   const [state, formAction, isPending] = useActionState(loginUser, null);
 
   const getFieldError = (fieldName: string) => {
-    if (state && state.errors) {
+    if (state && state.error) {
       const error = state.errors.find((err: any) => err.field === fieldName);
       return error.message;
     } else {
