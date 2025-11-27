@@ -32,6 +32,18 @@ export const registerPatients = async (_currentState: any, formData: any) : Prom
         address: formData.get("address") as string,
         }  
     }
+        const validatedField = registerValidationZodSchema.safeParse(registerForm)
+            if (!validatedField.success) {
+            return {
+                success: false,
+                errors: validatedField.error.issues.map(issue => {
+                    return {
+                        field: issue.path[0],
+                        message: issue.message,
+                    }
+                })
+            }
+        }
     const newFormData = new FormData()
     newFormData.append("data",JSON.stringify(registerForm))
     const res = await fetch("http://localhost:5000/api/v1/user/create-patient",{
