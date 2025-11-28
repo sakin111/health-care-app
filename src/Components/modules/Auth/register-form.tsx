@@ -3,9 +3,9 @@
 "use client";
 
 
-import { Button } from "@/components/ui/button";
-import { Field, FieldDescription, FieldGroup, FieldLabel } from "@/components/ui/field";
-import { Input } from "@/components/ui/input";
+import { Button } from "@/src/components/ui/button";
+import { Field, FieldDescription, FieldGroup, FieldLabel } from "@/src/components/ui/field";
+import { Input } from "@/src/components/ui/input";
 import { registerPatients } from "@/src/services/Auth/registerPatients";
 import { useActionState } from "react";
 

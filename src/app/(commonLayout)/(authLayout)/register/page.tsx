@@ -5,8 +5,8 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
-import RegisterForm from "@/src/Components/modules/Auth/register-form";
+} from "@/src/components/ui/card";
+import RegisterForm from "@/src/components/modules/Auth/register-form";
 
 const RegisterPage = () => {
   return (

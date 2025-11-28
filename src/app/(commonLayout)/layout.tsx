@@ -1,5 +1,5 @@
-import Footer from "@/src/Components/Shared/Footer";
-import Navbar from "@/src/Components/Shared/NavBar";
+import Footer from "@/src/components/Shared/Footer";
+import Navbar from "@/src/components/Shared/NavBar";
 
 
 

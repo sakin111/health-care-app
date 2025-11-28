@@ -1,9 +1,9 @@
 
-import { Hero } from "@/src/Components/modules/Home/Hero";
-import Specialties from "@/src/Components/modules/Home/Specialties";
-import Steps from "@/src/Components/modules/Home/steps";
-import Testimonials from "@/src/Components/modules/Home/Testimonial";
-import TopRatedDoctors from "@/src/Components/modules/Home/TopRatedDoctors";
+import { Hero } from "@/src/components/modules/Home/Hero";
+import Specialties from "@/src/components/modules/Home/Specialties";
+import Steps from "@/src/components/modules/Home/steps";
+import Testimonials from "@/src/components/modules/Home/Testimonial";
+import TopRatedDoctors from "@/src/components/modules/Home/TopRatedDoctors";
 import Head from "next/head";
 
 

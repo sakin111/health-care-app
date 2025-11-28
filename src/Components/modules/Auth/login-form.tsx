@@ -2,9 +2,9 @@
 
 "use client";
 
-import { Button } from "@/components/ui/button";
-import { Field, FieldDescription, FieldGroup, FieldLabel } from "@/components/ui/field";
-import { Input } from "@/components/ui/input";
+import { Button } from "@/src/components/ui/button";
+import { Field, FieldDescription, FieldGroup, FieldLabel } from "@/src/components/ui/field";
+import { Input } from "@/src/components/ui/input";
 import { loginUser } from "@/src/services/Auth/loginUser";
 import { useActionState } from "react";
 
@@ -14,7 +14,7 @@ import { useActionState } from "react";
 
 
 
-const LoginForm = () => {
+const LoginForm = ({redirect} : {redirect?:string | undefined}) => {
   const [state, formAction, isPending] = useActionState(loginUser, null);
 
   const getFieldError = (fieldName: string) => {
@@ -28,6 +28,8 @@ const LoginForm = () => {
   console.log(state);
   return (
     <form action={formAction}>
+
+      {redirect && <input type="hidden" name="redirect" value={redirect}/>}
       <FieldGroup>
         <div className="grid grid-cols-1 gap-4">
           {/* Email */}

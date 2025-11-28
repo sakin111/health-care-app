@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Menu, Sheet } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
+import { Button } from "@/src/components/ui/button";
+import { SheetContent, SheetTitle, SheetTrigger } from "@/src/components/ui/sheet";
 
 const Navbar = () => {
   const navItems = [

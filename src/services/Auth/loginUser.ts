@@ -2,6 +2,7 @@
 "use server"
 
 
+import { getDefaultDashboardRoute, isValidRedirectForRole, UserRole } from "@/src/lib/auth-utils";
 import { parse } from "cookie";
 import jwt, { JwtPayload } from 'jsonwebtoken';
 import { cookies } from "next/headers";
@@ -113,7 +114,6 @@ export const loginUser = async (_currentState: any, formData: any): Promise<any>
         }
 
     } catch (error: any) {
-        // Re-throw NEXT_REDIRECT errors so Next.js can handle them
         if (error?.digest?.startsWith('NEXT_REDIRECT')) {
             throw error;
         }
